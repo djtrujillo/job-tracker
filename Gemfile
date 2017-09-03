@@ -41,6 +41,8 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'rspec-rails'
   gem 'pry'
+  gem 'shoulda-matchers'
+  gem 'launchy'
 end
 
 group :development do
