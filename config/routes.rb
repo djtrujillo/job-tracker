@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root to: 'dashboards#show'
+
   get '/dashboard', to: 'dashboards#show'
 
   resources :companies do
@@ -12,6 +14,5 @@ Rails.application.routes.draw do
   end
 
   resources :categories
-
 
 end
