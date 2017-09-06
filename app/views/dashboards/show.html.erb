@@ -1,3 +1,14 @@
-<h3>Count of jobs by level of interest: <%= @jobs.count_by_interest %></h3>
+<h1>Count of Jobs by Level of Interest:</h1>
+<% @jobs.count_by_interest.each do |key, value| %>
+  <p>Level of Interest: <%= key %> Count: <%= value %></p>
+<% end %>
 
-<h3>Top Three Companies by Average Level of Interest: <%= @companies.average_level_of_interest %> </h3>
+<h1>Top Three Companies by Average Level of Interest</h1>
+<% @jobs.top_companies.each do |array| %>
+  <p>Company: <%= array[0] %>, Average Level of Interest: <%= array[1] %></p>
+<% end %>
+
+<h1>Count of Jobs by Location</h1>
+<% @jobs.count_by_location.each do |key, value| %>
+  <p>Location: <%= link_to key, jobs_path(:location => key) %>, Count of Jobs: <%= value %></p>
+<% end %>

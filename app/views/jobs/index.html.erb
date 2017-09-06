@@ -1,5 +1,5 @@
-All Jobs
+<h1>All Jobs</h1>
 
 <% @jobs.each do |job| %>
-  <ul><%= job.title %> at <%= job.company.name %> in <%= job.city %></ul>
+  <ul><%= job.title %> at <%= job.company.name %> in <%= job.city %> Level of Interest: <%= job.level_of_interest %></ul>
 <% end %>
